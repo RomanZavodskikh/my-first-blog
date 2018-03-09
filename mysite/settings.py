@@ -25,7 +25,7 @@ SECRET_KEY = '0+t=%++%w3eh61@ati*)^ts0=o!a7w-rk_i6p=d^jk7^fc^mbw'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '[::1]', 'roza.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '[::1]', 'roza.pythonanywhere.com', '*']
 
 
 # Application definition

@@ -38,3 +38,8 @@ def post_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
+
+def post_search(request):
+    query = request.GET.get('Query', '')
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date').filter(text__icontains=query)
+    return render(request, 'blog/post_search.html', {'posts': posts})
